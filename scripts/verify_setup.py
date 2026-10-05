@@ -136,7 +136,7 @@ def check_litellm_completion(model: str) -> None:
         resp = completion(
             model=model,
             messages=[{"role": "user", "content": "Reply with just: OK"}],
-            max_tokens=10,
+            max_tokens=100,
         )
         # LiteLLM normalizes to OpenAI-style responses
         text = resp["choices"][0]["message"]["content"].strip()
