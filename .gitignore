@@ -219,3 +219,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data: generated SQLite databases (regenerate with populate_db.py)
+*.db

@@ -37,6 +37,17 @@ def _fake_response(messages: list[dict]) -> SimpleNamespace:
             '{"relevant": %s, "relevance_score": %d, '
             '"reasoning": "mock judgment", "key_topics": []}'
         ) % ("true" if relevant else "false", 9 if relevant else 1)
+    elif "Summarize these" in prompt:
+        # SummarizerAgent: lines look like "- <title>: <reasoning>"
+        titles = re.findall(r"^- (.+?):", prompt, flags=re.MULTILINE)
+        content = f"Mock summary covering {len(titles)} article(s): " + "; ".join(
+            titles
+        )
+    elif "daily AI/ML newsletter" in prompt:
+        # WriterAgent: echo the summary so the newsletter keeps its content
+        summary = prompt.split("Here's the summary of today's articles:")[-1]
+        summary = summary.split("Write an engaging newsletter")[0].strip()
+        content = f"Hello readers! (mock newsletter)\n\n{summary}\n\nSee you tomorrow."
     else:
         content = "Hello! (mock response)"
 
