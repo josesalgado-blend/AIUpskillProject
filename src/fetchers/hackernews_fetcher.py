@@ -5,6 +5,7 @@ import logging
 from typing import List
 import aiohttp
 from src.models.article import Article
+from src.strategies.rate_limit_strategy import SemaphoreStrategy
 
 logger = logging.getLogger(__name__)
 
@@ -16,10 +17,17 @@ class HackerNewsFetcher(BaseFetcher):
     Inherits from BaseFetcher.
     Only implements source-specific logic.
     """
+
+    def __init__(self, transformer, storage, rate_limiter=None):
+        super().__init__(transformer, storage)
+        # Use provided strategy or default
+        self.rate_limiter = rate_limiter or SemaphoreStrategy(10)
     
     async def fetch_articles(self) -> List[Article]:
         """Fetch from HackerNews API. Returns [] on failure (LSP contract)."""
         url = "https://hacker-news.firebaseio.com/v0/topstories.json"
+
+        await self.rate_limiter.acquire()
 
         try:
             async with aiohttp.ClientSession() as session:
@@ -41,6 +49,9 @@ class HackerNewsFetcher(BaseFetcher):
         except Exception as e:
             logger.error(f"HackerNews fetch failed: {e}")
             return []
+        
+        finally:
+            self.rate_limiter.release()
     
     def get_source_name(self) -> str:
         """Return source name."""
