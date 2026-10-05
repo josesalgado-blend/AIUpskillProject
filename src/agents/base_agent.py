@@ -21,6 +21,7 @@ class BaseAgent(ABC):
         self,
         model: Optional[str] = None,
         tools: Optional[List[Dict]] = None,
+        num_retries: Optional[int] = None,
     ):
         self.model = model or os.getenv("LITELLM_MODEL")
         if not self.model:
@@ -28,6 +29,13 @@ class BaseAgent(ABC):
                 "No model configured. Set LITELLM_MODEL in .env "
                 "or pass `model=` to the agent constructor."
             )
+        # Retries on transient LLM errors (e.g. per-minute 429s). Defaults to
+        # LLM_NUM_RETRIES from the environment, or 2.
+        self.num_retries = (
+            num_retries
+            if num_retries is not None
+            else int(os.getenv("LLM_NUM_RETRIES", "2"))
+        )
         self.tools = tools or []
         self.tool_functions: Dict[str, Callable] = {}
 
@@ -57,6 +65,7 @@ class BaseAgent(ABC):
                 model=self.model,
                 messages=messages,
                 tools=self.tools or None,
+                num_retries=self.num_retries,
             )
             msg = response.choices[0].message
 
@@ -159,7 +168,11 @@ class BaseAgent(ABC):
         messages.append({"role": "user", "content": prompt})
 
         try:
-            response = completion(model=self.model, messages=messages)
+            response = completion(
+                model=self.model,
+                messages=messages,
+                num_retries=self.num_retries,
+            )
             return response.choices[0].message.content
         except Exception as e:
             print(f"❌ LLM call failed: {e}")

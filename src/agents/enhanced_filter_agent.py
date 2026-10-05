@@ -66,4 +66,5 @@ Output JSON:
                 "relevance_score": 0,
                 "reasoning": f"Error: {e}",
                 "key_topics": [],
+                "error": True,
             }
