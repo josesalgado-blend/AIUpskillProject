@@ -2,10 +2,10 @@
 
 import asyncio
 import aiohttp
-from typing import List
-from datetime import datetime
+from typing import Any, Dict, List, Optional
 from src.models.article import Article
 from src.storage.markdown_storage import MarkdownStorage
+from src.transformers.article_transformer import ArticleTransformer
 from src.utils.rate_limiter import RateLimiter
 
 
@@ -18,8 +18,13 @@ class HackerNewsFetcher:
 
     BASE_URL = "https://hacker-news.firebaseio.com/v0"
 
-    def __init__(self):
-        self.storage = MarkdownStorage()
+    def __init__(
+        self,
+        transformer: Optional[ArticleTransformer] = None,
+        storage: Optional[MarkdownStorage] = None,
+    ):
+        self.transformer = transformer or ArticleTransformer()
+        self.storage = storage or MarkdownStorage()
         self.rate_limiter = RateLimiter(max_concurrent=10)
 
     async def fetch(self, limit: int = 30) -> List[Article]:
@@ -62,34 +67,23 @@ class HackerNewsFetcher:
         tasks = [self._fetch_story(story_id) for story_id in story_ids]
 
         # Run all tasks concurrently
-        stories = await asyncio.gather(*tasks)
+        raw_items = await asyncio.gather(*tasks)
 
-        # Filter out None (failed fetches)
-        return [s for s in stories if s is not None]
+        # Drop failed fetches and let the transformer build the Articles
+        # (it also skips items without URL, e.g. Ask HN)
+        return self.transformer.transform_hackernews(
+            [item for item in raw_items if item is not None]
+        )
 
-    async def _fetch_story(self, story_id: int) -> Article:
-        """Fetch single story by ID with rate limiting."""
+    async def _fetch_story(self, story_id: int) -> Optional[Dict[str, Any]]:
+        """Fetch raw story JSON by ID with rate limiting."""
         url = f"{self.BASE_URL}/item/{story_id}.json"
 
         try:
             async with self.rate_limiter:
                 async with aiohttp.ClientSession() as session:
                     async with session.get(url) as response:
-                        data = await response.json()
-
-                        # Skip if no URL (Ask HN, etc.)
-                        if not data.get("url"):
-                            return None
-
-                        # Convert to Article
-                        return Article(
-                            title=data.get("title", "No Title"),
-                            url=data["url"],
-                            published_at=datetime.fromtimestamp(data.get("time", 0)),
-                            source="hackernews",
-                            summary=data.get("text", "")[:200],  # First 200 chars
-                            score=data.get("score", 0),
-                        )
+                        return await response.json()
         except Exception as e:
             print(f"⚠️  Failed to fetch story {story_id}: {e}")
             return None
