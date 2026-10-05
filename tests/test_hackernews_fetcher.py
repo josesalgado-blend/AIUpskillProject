@@ -4,7 +4,7 @@ import pytest
 from src.fetchers.hackernews_fetcher import HackerNewsFetcher
 from src.models.article import Article
 from src.transformers.article_transformer import ArticleTransformer
-from src.storage.markdown_storage_2 import MarkdownStorage
+from src.storage.markdown_storage import MarkdownStorage
 
 
 @pytest.mark.asyncio
