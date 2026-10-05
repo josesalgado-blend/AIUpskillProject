@@ -1,5 +1,6 @@
 """Test database MCP server."""
 import asyncio
+import sys
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
@@ -8,9 +9,12 @@ async def test_database_server():
     """Test database MCP server."""
     print("🔌 Connecting to database server...")
     
+    # sys.executable: same interpreter as this script (bare "python" may lack `mcp`).
+    # "-m": run as a module so `src` is importable. "-X utf8": the SDK starts the
+    # server with a reduced env, so force UTF-8 for emoji/accents in responses.
     server_params = StdioServerParameters(
-        command="python",
-        args=["src/mcp/database_server.py"]
+        command=sys.executable,
+        args=["-X", "utf8", "-m", "src.mcp.database_server"]
     )
     
     async with stdio_client(server_params) as (read, write):
