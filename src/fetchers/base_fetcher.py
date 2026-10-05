@@ -50,12 +50,18 @@ class BaseFetcher(ABC):
     
     async def fetch_and_save(self) -> List[Article]:
         """
-        Fetch articles and save to storage.
+        Template method - defines algorithm skeleton.
         
-        Template method - same for all fetchers.
+        Steps:
+        1. Fetch (varies by subclass)
+        2. Save (same for all)
+        
+        Subclasses customize step 1 via fetch_articles().
         """
+        # Step 1: Fetch (customizable)
         articles = await self.fetch_articles()
         
+        # Step 2: Save (same for all)
         if articles:
             filename = f"{self.get_source_name()}_articles.md"
             self.storage.save(articles, filename)
