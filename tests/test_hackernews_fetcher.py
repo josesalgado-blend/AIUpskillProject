@@ -31,12 +31,9 @@ async def test_hackernews_fetcher():
     transformer = ArticleTransformer()
     storage = MarkdownStorage("data/test_articles")
 
-    fetcher = HackerNewsFetcher(
-        transformer=transformer,
-        storage=storage
-    )
+    fetcher = HackerNewsFetcher(transformer=transformer, storage=storage)
 
     articles = await fetcher.fetch_articles()
 
     assert len(articles) > 0
-    assert all(hasattr(a, 'title') for a in articles)
+    assert all(hasattr(a, "title") for a in articles)

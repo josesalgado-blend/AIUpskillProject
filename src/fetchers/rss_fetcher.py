@@ -13,11 +13,11 @@ logger = logging.getLogger(__name__)
 
 class RSSFetcher(BaseFetcher):
     """Fetch from RSS feed."""
-    
+
     def __init__(self, feed_url: str, transformer, storage):
         super().__init__(transformer, storage)
         self.feed_url = feed_url
-    
+
     async def fetch_articles(self) -> List[Article]:
         """Fetch from RSS feed. Returns [] on failure (LSP contract)."""
         try:
@@ -27,7 +27,7 @@ class RSSFetcher(BaseFetcher):
         except Exception as e:
             logger.error(f"RSS fetch failed ({self.feed_url}): {e}")
             return []
-    
+
     def get_source_name(self) -> str:
         """Return source name."""
         return "rss"

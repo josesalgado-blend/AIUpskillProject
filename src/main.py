@@ -9,24 +9,22 @@ from src.storage.markdown_storage import MarkdownStorage
 
 async def main():
     """Main entry point with dependency injection."""
-    
+
     # Create dependencies
     transformer = ArticleTransformer()
     storage = MarkdownStorage("data/articles")
-    
+
     # Create fetchers
     fetchers = [
         HackerNewsFetcher(transformer, storage),
         GitHubTrendingFetcher(transformer, storage),
     ]
-    
+
     # Inject dependencies into orchestrator
     orchestrator = FetchOrchestrator(
-        fetchers=fetchers,
-        storage=storage,
-        transformer=transformer
+        fetchers=fetchers, storage=storage, transformer=transformer
     )
-    
+
     # Run
     articles = await orchestrator.fetch_all()
     print(f"✅ Fetched {len(articles)} articles total")
@@ -34,4 +32,5 @@ async def main():
 
 if __name__ == "__main__":
     import asyncio
+
     asyncio.run(main())

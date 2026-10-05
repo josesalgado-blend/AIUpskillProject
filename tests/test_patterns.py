@@ -39,14 +39,14 @@ def test_factory():
     storage = MarkdownStorage()
 
     # Create via factory
-    fetcher = FetcherFactory.create('hackernews', transformer, storage)
+    fetcher = FetcherFactory.create("hackernews", transformer, storage)
 
     assert isinstance(fetcher, HackerNewsFetcher)
-    assert fetcher.get_source_name() == 'hackernews'
+    assert fetcher.get_source_name() == "hackernews"
 
     # List available types
     types = FetcherFactory.get_available_types()
-    assert 'hackernews' in types
-    assert 'github' in types
+    assert "hackernews" in types
+    assert "github" in types
 
     print("✅ Factory works!")
