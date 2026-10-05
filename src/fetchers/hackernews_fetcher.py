@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 class HackerNewsFetcher(BaseFetcher):
     """
     Fetch top stories from HackerNews.
-    
+
     Inherits from BaseFetcher.
     Only implements source-specific logic.
     """
@@ -22,7 +22,7 @@ class HackerNewsFetcher(BaseFetcher):
         super().__init__(transformer, storage)
         # Use provided strategy or default
         self.rate_limiter = rate_limiter or SemaphoreStrategy(10)
-    
+
     async def fetch_articles(self) -> List[Article]:
         """Fetch from HackerNews API. Returns [] on failure (LSP contract)."""
         url = "https://hacker-news.firebaseio.com/v0/topstories.json"
@@ -38,7 +38,9 @@ class HackerNewsFetcher(BaseFetcher):
                 # Fetch first 30 stories
                 stories = []
                 for story_id in story_ids[:30]:
-                    item_url = f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json"
+                    item_url = (
+                        f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json"
+                    )
                     async with session.get(item_url) as response:
                         item = await response.json()
                         if item:
@@ -49,10 +51,10 @@ class HackerNewsFetcher(BaseFetcher):
         except Exception as e:
             logger.error(f"HackerNews fetch failed: {e}")
             return []
-        
+
         finally:
             self.rate_limiter.release()
-    
+
     def get_source_name(self) -> str:
         """Return source name."""
         return "hackernews"

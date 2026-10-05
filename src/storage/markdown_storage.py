@@ -1,4 +1,5 @@
 """Save articles to markdown files."""
+
 from typing import List
 from pathlib import Path
 from datetime import datetime
@@ -6,44 +7,43 @@ from src.models.article import Article
 from src.storage.base_storage import ArticleStorage
 
 
-
 class MarkdownStorage(ArticleStorage):
     """
     Saves articles to markdown files.
-    
+
     Single Responsibility: File storage only.
     """
-    
+
     def __init__(self, base_path: str = "data/articles"):
         self.base_path = Path(base_path)
         self.base_path.mkdir(parents=True, exist_ok=True)
-    
+
     def save(self, articles: List[Article], filename: str = None) -> Path:
         """
         Save articles to markdown file.
-        
+
         Args:
             articles: List of articles to save
             filename: Optional filename, defaults to dated file
-            
+
         Returns:
             Path to saved file
         """
         if filename is None:
             date_str = datetime.now().strftime("%Y-%m-%d")
             filename = f"articles_{date_str}.md"
-        
+
         filepath = self.base_path / filename
-        
-        with open(filepath, 'w', encoding='utf-8') as f:
+
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(f"# Articles - {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n")
-            
+
             for article in articles:
                 f.write(self._format_article(article))
                 f.write("\n---\n\n")
-        
+
         return filepath
-    
+
     def _format_article(self, article: Article) -> str:
         """Format single article as markdown."""
         return f"""## {article.title}
@@ -55,15 +55,19 @@ class MarkdownStorage(ArticleStorage):
 
 {article.summary}
 """
-    
+
+
 class JSONStorage(ArticleStorage):
     """Save articles as JSON."""
+
     def save(self, articles, filename=None):
         # JSON implementation
         ...
 
+
 class DatabaseStorage(ArticleStorage):
     """Save articles to database."""
+
     def save(self, articles, filename=None):
         # Database implementation
         ...
@@ -76,9 +80,8 @@ test_article = Article(
     url="http://test.com",
     published_at=datetime.now(),
     source="test",
-    summary="Test summary"
+    summary="Test summary",
 )
 path = storage.save([test_article], "test.md")
 assert path.exists()
 print(f"✅ Saved to {path}")
-
