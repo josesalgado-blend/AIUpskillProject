@@ -3,9 +3,11 @@ from typing import List
 from pathlib import Path
 from datetime import datetime
 from src.models.article import Article
+from src.storage.base_storage import ArticleStorage
 
 
-class MarkdownStorage:
+
+class MarkdownStorage(ArticleStorage):
     """
     Saves articles to markdown files.
     
@@ -53,6 +55,19 @@ class MarkdownStorage:
 
 {article.summary}
 """
+    
+class JSONStorage(ArticleStorage):
+    """Save articles as JSON."""
+    def save(self, articles, filename=None):
+        # JSON implementation
+        ...
+
+class DatabaseStorage(ArticleStorage):
+    """Save articles to database."""
+    def save(self, articles, filename=None):
+        # Database implementation
+        ...
+
 
 # Quick test
 storage = MarkdownStorage("data/test_articles")
