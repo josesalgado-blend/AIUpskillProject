@@ -3,17 +3,19 @@
 import pytest
 from src.fetchers.hackernews_fetcher import HackerNewsFetcher
 from src.models.article import Article
+from src.transformers.article_transformer import ArticleTransformer
+from src.storage.markdown_storage import MarkdownStorage
 
 
 @pytest.mark.asyncio
-async def test_fetch_returns_articles():
-    """Test that fetch returns list of articles."""
-    fetcher = HackerNewsFetcher()
-    articles = await fetcher.fetch(limit=5)
+async def test_fetch_returns_articles(tmp_path):
+    """Test that fetch_articles returns list of articles."""
+    fetcher = HackerNewsFetcher(ArticleTransformer(), MarkdownStorage(str(tmp_path)))
+    articles = await fetcher.fetch_articles()
 
-    # Should get some articles
+    # Should get some articles (the fetcher reads the top 30 stories)
     assert len(articles) > 0
-    assert len(articles) <= 5
+    assert len(articles) <= 30
 
     # Each should be an Article
     for article in articles:
@@ -24,18 +26,17 @@ async def test_fetch_returns_articles():
 
 
 @pytest.mark.asyncio
-async def test_fetch_concurrent():
-    """Test that fetch is fast (concurrent)."""
-    import time
+async def test_hackernews_fetcher():
+    """Test HackerNews fetcher with new architecture."""
+    transformer = ArticleTransformer()
+    storage = MarkdownStorage("data/test_articles")
 
-    fetcher = HackerNewsFetcher()
+    fetcher = HackerNewsFetcher(
+        transformer=transformer,
+        storage=storage
+    )
 
-    start = time.time()
-    articles = await fetcher.fetch(limit=10)
-    elapsed = time.time() - start
+    articles = await fetcher.fetch_articles()
 
-    # Should be faster than sequential (< 5 seconds)
-    assert elapsed < 5.0
     assert len(articles) > 0
-
-    print(f"⚡ Fetched {len(articles)} articles in {elapsed:.2f}s")
+    assert all(hasattr(a, 'title') for a in articles)

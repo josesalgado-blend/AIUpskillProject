@@ -1,116 +1,320 @@
-# News Articles
+# Articles - 2026-10-05 01:02
 
-**Generated:** 2026-09-14 18:08:02
+## Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s
 
-**Total Articles:** 10
-
----
-
-## Pion, an agent designed to run any company autonomously
-
-**Source:** hackernews  
-**URL:** https://andonlabs.com/blog/why-we-built-pion  
-**Published:** 2026-09-14 12:16  
-**Score:** 237
+**Source:** hackernews
+**URL:** https://github.com/Niko1221/Strata
+**Published:** 2026-10-04 07:51:53
+**Score:** 697
 
 
 
 ---
 
-## Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit
+## In the wake of closure, a digital archive of animated materials appears online
 
-**Source:** hackernews  
-**URL:** https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html  
-**Published:** 2026-09-14 16:05  
-**Score:** 137
+**Source:** hackernews
+**URL:** https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/
+**Published:** 2026-10-04 16:01:28
+**Score:** 93
+
+<a href="https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;tippett-archive&#x2F;" rel="nofollow">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;tippett-archive&#x2F;</a>
+
+---
+
+## Nearly 200 people under observation after Irkutsk lab worker dies from plague
+
+**Source:** hackernews
+**URL:** https://www.themoscowtimes.com/2026/10/02/nearly-200-people-under-observation-after-irkutsk-lab-worker-dies-from-plague-a93857
+**Published:** 2026-10-04 21:31:45
+**Score:** 164
 
 
 
 ---
 
-## Distributed Systems Classics (2017)
+## A 40ms Go garbage collector pause caused by swap
 
-**Source:** hackernews  
-**URL:** https://nvartolomei.com/dist-sys-classics/  
-**Published:** 2026-09-14 11:02  
-**Score:** 212
-
-
-
----
-
-## Compressing a Flag to 11 Bits
-
-**Source:** hackernews  
-**URL:** https://read.vantezzen.io/miniflags  
-**Published:** 2026-09-12 10:57  
-**Score:** 23
+**Source:** hackernews
+**URL:** https://frn.sh/go-gc/
+**Published:** 2026-10-04 20:11:56
+**Score:** 40
 
 
 
 ---
 
-## OpenAI bots knew about the RubyGems caching vulnerability
+## ArtCraft Apps – open-source Adobe compatible suite written in Rust
 
-**Source:** hackernews  
-**URL:** https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/  
-**Published:** 2026-09-14 07:40  
-**Score:** 338
-
-
-
----
-
-## A Beginning for Mathematics
-
-**Source:** hackernews  
-**URL:** https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/  
-**Published:** 2026-09-14 10:33  
-**Score:** 151
+**Source:** hackernews
+**URL:** https://getartcraft.com/apps
+**Published:** 2026-10-04 18:02:43
+**Score:** 79
 
 
 
 ---
 
-## Charts built for Chat
+## Infidel goes wild
 
-**Source:** hackernews  
-**URL:** https://dbtcharts.com/blog/charts-built-for-chat/  
-**Published:** 2026-09-14 16:22  
-**Score:** 28
-
-
-
----
-
-## Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS
-
-**Source:** hackernews  
-**URL:** https://github.com/JamesRyanATX/fcbnerd  
-**Published:** 2026-09-14 18:01  
-**Score:** 3
+**Source:** hackernews
+**URL:** https://blog.zarfhome.com/2026/10/infidel-goes-wild
+**Published:** 2026-10-03 07:19:40
+**Score:** 111
 
 
 
 ---
 
-## How my e-reader lost its stripes
+## Powerless F1 drivers frustrated by Bahrain F1 software glitch
 
-**Source:** hackernews  
-**URL:** https://www.serpentine.com/posts/2026/x3-stripes/  
-**Published:** 2026-09-14 11:23  
-**Score:** 127
+**Source:** hackernews
+**URL:** https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/
+**Published:** 2026-10-04 20:54:08
+**Score:** 164
 
 
 
 ---
 
-## Principles for Fast Tokio Applications
+## The Tao of Backup
 
-**Source:** hackernews  
-**URL:** https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/  
-**Published:** 2026-09-14 10:27  
-**Score:** 152
+**Source:** hackernews
+**URL:** http://www.taobackup.com/index.html
+**Published:** 2026-10-02 06:19:36
+**Score:** 91
+
+
+
+---
+
+## A browser-native classic Visual Basic VB6 IDE
+
+**Source:** hackernews
+**URL:** https://wieslawsoltes.github.io/VB6/
+**Published:** 2026-10-04 13:49:17
+**Score:** 153
+
+
+
+---
+
+## Turn off Apple Intelligence on macOS 27 and get its disk space back
+
+**Source:** hackernews
+**URL:** https://github.com/omlahore/RemoveMacAI
+**Published:** 2026-10-04 14:42:25
+**Score:** 485
+
+
+
+---
+
+## Gods in the Classroom: Religion and Education in First Millennium BCE Babylonia
+
+**Source:** hackernews
+**URL:** https://www.cambridge.org/core/journals/iraq/article/gods-in-the-classroom-religion-and-education-in-1st-millennium-bce-babylonia/EB059EE81804DCBC1848CACBD6298E0B
+**Published:** 2026-10-01 06:31:08
+**Score:** 9
+
+
+
+---
+
+## Improper redaction reveals Google Data Center water and electricity usage
+
+**Source:** hackernews
+**URL:** https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/
+**Published:** 2026-10-04 14:37:05
+**Score:** 335
+
+
+
+---
+
+## Self-hosted HTTP tunnels with SSH and Nginx
+
+**Source:** hackernews
+**URL:** https://vincent.bernat.ch/en/blog/2026-http-over-ssh
+**Published:** 2026-10-04 17:25:10
+**Score:** 110
+
+
+
+---
+
+## Automating my 35mm film scanning pipeline
+
+**Source:** hackernews
+**URL:** https://shannadige.com/blog/darkroom/
+**Published:** 2026-10-03 12:35:42
+**Score:** 63
+
+
+
+---
+
+## Fixed Points and Strike Mandates
+
+**Source:** hackernews
+**URL:** https://pvk.ca/Blog/2012/02/19/fixed-points-and-strike-mandates/
+**Published:** 2026-09-30 20:22:48
+**Score:** 10
+
+
+
+---
+
+## Xray-core concealed a certificate verification bypass vulnerability
+
+**Source:** hackernews
+**URL:** https://github.com/net4people/bbs/issues/672
+**Published:** 2026-10-04 12:38:54
+**Score:** 72
+
+
+
+---
+
+## Watson Jr. memo about CDC 6600 (1963)
+
+**Source:** hackernews
+**URL:** https://www.computerhistory.org/revolution/supercomputers/10/33/62
+**Published:** 2026-10-03 07:27:31
+**Score:** 34
+
+
+
+---
+
+## 'Neanderthals Among Us' review
+
+**Source:** hackernews
+**URL:** https://www.historytoday.com/archive/review/neanderthals-among-us-peter-sahlins-review
+**Published:** 2026-10-03 15:41:15
+**Score:** 65
+
+
+
+---
+
+## Interview with Chicken Scheme Maintainer Sjamaan/Peter Bex
+
+**Source:** hackernews
+**URL:** https://alexalejandre.com/interviews/peter-bex/
+**Published:** 2026-10-02 17:17:04
+**Score:** 27
+
+
+
+---
+
+## Demystifying Tufte's data-ink ratio
+
+**Source:** hackernews
+**URL:** https://tuftesrazor.scienceux.org/
+**Published:** 2026-10-02 18:55:17
+**Score:** 27
+
+
+
+---
+
+## Homa: The end of TCP for AI clusters [video]
+
+**Source:** hackernews
+**URL:** https://www.youtube.com/watch?v=eZ8WWZzoaR0
+**Published:** 2026-10-04 14:42:25
+**Score:** 67
+
+Paper: 
+<a href="https:&#x2F;&#x2F;www.usenix.org&#x2F;system&#x2F;files&#x2F;atc21-ousterhout.pdf" rel="nofollow">https:&#x2F;&#x2F;www.usenix.org&#x2F;system&#x2F;files&#x2F;atc21-ousterhout.pdf</a>
+
+---
+
+## Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash
+
+**Source:** hackernews
+**URL:** https://niklasroy.com/gtc/
+**Published:** 2026-10-02 01:33:06
+**Score:** 181
+
+This is a functional 30-minute pendulum clock entirely from discarded materials—cardboard, zip ties, tape, a yardstick, and a paperclip escapement, built in the German Eldorado of precision watchmakin
+
+---
+
+## All I wanted was a custom domain email
+
+**Source:** hackernews
+**URL:** https://jacobg.co/emails-at-jacobg-co/
+**Published:** 2026-10-04 12:47:21
+**Score:** 49
+
+
+
+---
+
+## How to scale intent, quality, and artistry with AI [video]
+
+**Source:** hackernews
+**URL:** https://www.youtube.com/watch?v=GLvFTMtw4Jk
+**Published:** 2026-10-04 03:41:58
+**Score:** 72
+
+
+
+---
+
+## Bill Draper has died
+
+**Source:** hackernews
+**URL:** https://www.nytimes.com/2026/09/30/technology/william-draper-dead.html
+**Published:** 2026-10-04 07:21:35
+**Score:** 108
+
+<a href="https:&#x2F;&#x2F;archive.ph&#x2F;YRgDY" rel="nofollow">https:&#x2F;&#x2F;archive.ph&#x2F;YRgDY</a>
+
+---
+
+## What is going on with ceiling fans
+
+**Source:** hackernews
+**URL:** https://mcmansionhell.com/post/829127919552151552/what-is-going-on-with-ceiling-fans
+**Published:** 2026-09-30 22:52:10
+**Score:** 268
+
+
+
+---
+
+## Show HN: AI search for every photo and every frame of video on macOS
+
+**Source:** hackernews
+**URL:** https://github.com/allenv0/SCM
+**Published:** 2026-10-04 04:24:52
+**Score:** 149
+
+
+
+---
+
+## Results from the ASIC puzzle
+
+**Source:** hackernews
+**URL:** https://blog.janestreet.com/asic-puzzle-results/
+**Published:** 2026-10-02 09:42:44
+**Score:** 82
+
+
+
+---
+
+## Kagi Ends Orion Browser Development for Linux, Will Open-Source It
+
+**Source:** hackernews
+**URL:** https://linuxiac.com/kagi-ends-orion-browser-development-for-linux-will-open-source-it/
+**Published:** 2026-10-04 23:18:39
+**Score:** 11
 
 
 
