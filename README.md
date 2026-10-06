@@ -254,6 +254,10 @@ interpreter as the client (`sys.executable`, `-m src.mcp.<server>`).
 | [M4 — MCP Pipeline](docs/milestones/milestone-4-mcp-pipeline.md) | Database MCP server, `SearchSkill`, three-agent pipeline |
 | [M5 — Evaluation](docs/milestones/milestone-5-evaluation.md) | Golden dataset, metrics, documentation |
 
+## License
+
+MIT
+
 ## About the curriculum
 
 This repository is part of Blend's 5-week AI engineering onboarding curriculum
