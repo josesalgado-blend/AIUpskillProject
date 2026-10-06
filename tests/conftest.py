@@ -74,6 +74,8 @@ def completion_with_fallback(**kwargs):
 def llm_completion(monkeypatch):
     """Make agents use the real LLM, falling back to mocks if it fails."""
     monkeypatch.setattr("src.agents.base_agent.completion", completion_with_fallback)
+    # Tests must not sleep between calls (the throttle is for real runs).
+    monkeypatch.setenv("LLM_MIN_INTERVAL", "0")
     # Agents require a model name; use a placeholder when none is configured
     # (the real call then fails and the mock fallback takes over).
     if not os.getenv("LITELLM_MODEL"):
