@@ -11,6 +11,8 @@ beautifulsoup4==4.15.0
 # LLM provider abstraction (Milestone 3 onwards)
 # LiteLLM lets us call Anthropic, OpenAI, Gemini, etc. behind a single API.
 litellm==1.55.0
+# Needed by LiteLLM's `num_retries` (retry on transient LLM errors)
+tenacity==9.1.4
 
 # Model Context Protocol (Milestone 4)
 mcp==1.1.2
