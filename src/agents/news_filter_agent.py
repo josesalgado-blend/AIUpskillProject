@@ -86,12 +86,20 @@ class NewsFilterAgent(BaseAgent):
         print(f"🔍 Filtering {len(articles)} articles...")
 
         filtered = []
+        failed = 0
 
         for i, article in enumerate(articles):
             print(f"   [{i+1}/{len(articles)}] {article['title'][:50]}...")
 
             # Ask LLM to judge relevance
             judgment = self._judge_relevance(article)
+
+            # An API/parse error is NOT "not relevant": count it separately so
+            # the result can't silently look like a strict filter.
+            if judgment.get("error"):
+                failed += 1
+                print("      ⚠️  Could not judge this article (API/parse error)")
+                continue
 
             if (
                 judgment["relevant"]
@@ -110,11 +118,17 @@ class NewsFilterAgent(BaseAgent):
                 print(f"      ❌ Not relevant (score: {judgment['relevance_score']})")
 
         print(f"\n📊 Filtered: {len(filtered)}/{len(articles)} articles")
+        if failed:
+            print(
+                f"⚠️  {failed}/{len(articles)} articles could not be judged "
+                "(quota, network or invalid response): the result is INCOMPLETE."
+            )
 
         return {
             "filtered_articles": filtered,
             "total_input": len(articles),
             "total_output": len(filtered),
+            "total_failed": failed,
         }
 
     def _judge_relevance(self, article: Dict) -> Dict:
@@ -177,6 +191,7 @@ Your JSON response:"""
                 "relevance_score": 0,
                 "reasoning": f"Failed to judge: {e}",
                 "key_topics": [],
+                "error": True,
             }
 
     async def _save_result(self, result: Dict[str, Any], output_path: str):
@@ -196,9 +211,18 @@ Your JSON response:"""
             f.write("# Filtered AI/ML Articles\n\n")
             f.write(f"**Total Input:** {result['total_input']}\n")
             f.write(f"**Total Output:** {result['total_output']}\n")
-            f.write(
-                f"**Filter Rate:** {result['total_output']/result['total_input']*100:.1f}%\n\n"
+            rate = (
+                result["total_output"] / result["total_input"] * 100
+                if result["total_input"]
+                else 0
             )
+            f.write(f"**Filter Rate:** {rate:.1f}%\n")
+            if result.get("total_failed"):
+                f.write(
+                    f"**Could not judge:** {result['total_failed']} "
+                    "(API/parse errors) - INCOMPLETE\n"
+                )
+            f.write("\n")
             f.write("---\n\n")
 
             for article in articles:

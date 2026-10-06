@@ -2,10 +2,14 @@
 
 import os
 import json
+import time
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Optional, List, Callable
 
 from litellm import completion
+
+# Shared by all agents: providers rate-limit per account, not per agent.
+_last_llm_call = 0.0
 
 
 class BaseAgent(ABC):
@@ -21,6 +25,8 @@ class BaseAgent(ABC):
         self,
         model: Optional[str] = None,
         tools: Optional[List[Dict]] = None,
+        num_retries: Optional[int] = None,
+        min_interval: Optional[float] = None,
     ):
         self.model = model or os.getenv("LITELLM_MODEL")
         if not self.model:
@@ -28,8 +34,30 @@ class BaseAgent(ABC):
                 "No model configured. Set LITELLM_MODEL in .env "
                 "or pass `model=` to the agent constructor."
             )
+        # Retries on transient LLM errors (e.g. per-minute 429s). Defaults to
+        # LLM_NUM_RETRIES from the environment, or 2.
+        self.num_retries = (
+            num_retries
+            if num_retries is not None
+            else int(os.getenv("LLM_NUM_RETRIES", "2"))
+        )
+        # Minimum seconds between LLM calls, to stay under tokens-per-minute
+        # limits (e.g. Groq free tier). Defaults to LLM_MIN_INTERVAL, or 0.
+        self.min_interval = (
+            min_interval
+            if min_interval is not None
+            else float(os.getenv("LLM_MIN_INTERVAL", "0"))
+        )
         self.tools = tools or []
         self.tool_functions: Dict[str, Callable] = {}
+
+    def _throttle(self) -> None:
+        """Sleep just enough to keep `min_interval` between LLM calls."""
+        global _last_llm_call
+        wait = self.min_interval - (time.monotonic() - _last_llm_call)
+        if wait > 0:
+            time.sleep(wait)
+        _last_llm_call = time.monotonic()
 
     def register_tool_function(self, name: str, function: Callable) -> None:
         """Register the actual Python function backing a tool schema."""
@@ -53,10 +81,12 @@ class BaseAgent(ABC):
 
         # Hard cap on tool-call rounds — protects against infinite loops.
         for _ in range(10):
+            self._throttle()
             response = completion(
                 model=self.model,
                 messages=messages,
                 tools=self.tools or None,
+                num_retries=self.num_retries,
             )
             msg = response.choices[0].message
 
@@ -159,7 +189,12 @@ class BaseAgent(ABC):
         messages.append({"role": "user", "content": prompt})
 
         try:
-            response = completion(model=self.model, messages=messages)
+            self._throttle()
+            response = completion(
+                model=self.model,
+                messages=messages,
+                num_retries=self.num_retries,
+            )
             return response.choices[0].message.content
         except Exception as e:
             print(f"❌ LLM call failed: {e}")
