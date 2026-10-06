@@ -1,320 +1,330 @@
-# Articles - 2026-10-05 01:02
+# Articles - 2026-10-05 18:44
 
-## Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s
+## Beam: Reflection's 501B open-weight model
 
 **Source:** hackernews
-**URL:** https://github.com/Niko1221/Strata
-**Published:** 2026-10-04 07:51:53
-**Score:** 697
+**URL:** https://reflection.ai/blog/introducing-beam
+**Published:** 2026-10-05 14:16:35
+**Score:** 267
 
 
 
 ---
 
-## In the wake of closure, a digital archive of animated materials appears online
+## Find the flattest route between any two points in SF
 
 **Source:** hackernews
-**URL:** https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/
-**Published:** 2026-10-04 16:01:28
-**Score:** 93
-
-<a href="https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;tippett-archive&#x2F;" rel="nofollow">https:&#x2F;&#x2F;archive.org&#x2F;details&#x2F;tippett-archive&#x2F;</a>
-
----
-
-## Nearly 200 people under observation after Irkutsk lab worker dies from plague
-
-**Source:** hackernews
-**URL:** https://www.themoscowtimes.com/2026/10/02/nearly-200-people-under-observation-after-irkutsk-lab-worker-dies-from-plague-a93857
-**Published:** 2026-10-04 21:31:45
-**Score:** 164
+**URL:** https://flattensf.com/
+**Published:** 2026-10-05 16:40:50
+**Score:** 71
 
 
 
 ---
 
-## A 40ms Go garbage collector pause caused by swap
+## Example.com Just Launched the Biggest Redesign in Decades
 
 **Source:** hackernews
-**URL:** https://frn.sh/go-gc/
-**Published:** 2026-10-04 20:11:56
-**Score:** 40
+**URL:** https://www.debugbear.com/blog/example-dot-com-redesign-history
+**Published:** 2026-10-05 17:55:11
+**Score:** 26
 
 
 
 ---
 
-## ArtCraft Apps – open-source Adobe compatible suite written in Rust
+## Dust: Pretraining Transformers Without Backpropagation
 
 **Source:** hackernews
-**URL:** https://getartcraft.com/apps
-**Published:** 2026-10-04 18:02:43
-**Score:** 79
+**URL:** https://qlabs.sh/research/dust
+**Published:** 2026-10-05 16:15:07
+**Score:** 69
 
 
 
 ---
 
-## Infidel goes wild
+## Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates
 
 **Source:** hackernews
-**URL:** https://blog.zarfhome.com/2026/10/infidel-goes-wild
-**Published:** 2026-10-03 07:19:40
-**Score:** 111
+**URL:** https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors
+**Published:** 2026-10-05 16:00:21
+**Score:** 170
 
 
 
 ---
 
-## Powerless F1 drivers frustrated by Bahrain F1 software glitch
+## ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons
 
 **Source:** hackernews
-**URL:** https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/
-**Published:** 2026-10-04 20:54:08
-**Score:** 164
+**URL:** https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/
+**Published:** 2026-10-05 17:46:45
+**Score:** 23
 
 
 
 ---
 
-## The Tao of Backup
+## Worth Building
 
 **Source:** hackernews
-**URL:** http://www.taobackup.com/index.html
-**Published:** 2026-10-02 06:19:36
-**Score:** 91
+**URL:** https://armstr.ng/writing/worth-building
+**Published:** 2026-10-05 17:59:24
+**Score:** 15
 
 
 
 ---
 
-## A browser-native classic Visual Basic VB6 IDE
+## Ephemeral Testing
 
 **Source:** hackernews
-**URL:** https://wieslawsoltes.github.io/VB6/
-**Published:** 2026-10-04 13:49:17
-**Score:** 153
+**URL:** https://lemire.me/blog/2026/10/05/ephemeral-testing/
+**Published:** 2026-10-05 18:06:36
+**Score:** 4
 
 
 
 ---
 
-## Turn off Apple Intelligence on macOS 27 and get its disk space back
+## Using Blu-ray M-Disk as backup of last resort
 
 **Source:** hackernews
-**URL:** https://github.com/omlahore/RemoveMacAI
-**Published:** 2026-10-04 14:42:25
-**Score:** 485
+**URL:** https://smyck.net/2026/10/03/holocron-the-backup-of-last-resort/
+**Published:** 2026-10-04 03:03:24
+**Score:** 38
 
 
 
 ---
 
-## Gods in the Classroom: Religion and Education in First Millennium BCE Babylonia
+## Web Search API
 
 **Source:** hackernews
-**URL:** https://www.cambridge.org/core/journals/iraq/article/gods-in-the-classroom-religion-and-education-in-1st-millennium-bce-babylonia/EB059EE81804DCBC1848CACBD6298E0B
-**Published:** 2026-10-01 06:31:08
-**Score:** 9
+**URL:** https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/
+**Published:** 2026-10-05 05:47:06
+**Score:** 471
 
 
 
 ---
 
-## Improper redaction reveals Google Data Center water and electricity usage
+## Graphical UI
 
 **Source:** hackernews
-**URL:** https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/
-**Published:** 2026-10-04 14:37:05
-**Score:** 335
+**URL:** https://www.graphicalui.com/
+**Published:** 2026-10-05 16:51:09
+**Score:** 19
 
 
 
 ---
 
-## Self-hosted HTTP tunnels with SSH and Nginx
+## Competitive Programmer's Handbook (2018) [pdf]
 
 **Source:** hackernews
-**URL:** https://vincent.bernat.ch/en/blog/2026-http-over-ssh
-**Published:** 2026-10-04 17:25:10
-**Score:** 110
+**URL:** https://cses.fi/book/book.pdf
+**Published:** 2026-10-03 08:24:01
+**Score:** 92
 
 
 
 ---
 
-## Automating my 35mm film scanning pipeline
+## DEDA – Tracking Dots Extraction, Decoding and Anonymisation Toolkit
 
 **Source:** hackernews
-**URL:** https://shannadige.com/blog/darkroom/
-**Published:** 2026-10-03 12:35:42
-**Score:** 63
+**URL:** https://github.com/dfd-tud/deda
+**Published:** 2026-10-04 07:09:10
+**Score:** 18
 
 
 
 ---
 
-## Fixed Points and Strike Mandates
+## Global Solar Atlas: summary of solar power potential globally
 
 **Source:** hackernews
-**URL:** https://pvk.ca/Blog/2012/02/19/fixed-points-and-strike-mandates/
-**Published:** 2026-09-30 20:22:48
-**Score:** 10
+**URL:** https://globalsolaratlas.info/
+**Published:** 2026-10-05 17:37:58
+**Score:** 6
 
 
 
 ---
 
-## Xray-core concealed a certificate verification bypass vulnerability
+## Anthropic reported diary entry to police, woman faces felony charge
 
 **Source:** hackernews
-**URL:** https://github.com/net4people/bbs/issues/672
-**Published:** 2026-10-04 12:38:54
-**Score:** 72
+**URL:** https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html
+**Published:** 2026-10-05 00:37:40
+**Score:** 482
 
 
 
 ---
 
-## Watson Jr. memo about CDC 6600 (1963)
+## A third way of using Linux
 
 **Source:** hackernews
-**URL:** https://www.computerhistory.org/revolution/supercomputers/10/33/62
-**Published:** 2026-10-03 07:27:31
-**Score:** 34
+**URL:** https://hisvirusness.com/third-is-the-way
+**Published:** 2026-10-05 15:17:07
+**Score:** 24
 
 
 
 ---
 
-## 'Neanderthals Among Us' review
+## Is mathematics over, or just graduating?
 
 **Source:** hackernews
-**URL:** https://www.historytoday.com/archive/review/neanderthals-among-us-peter-sahlins-review
-**Published:** 2026-10-03 15:41:15
-**Score:** 65
+**URL:** https://docs.google.com/document/d/e/2PACX-1vTSh-pyNP3Gi99WMmsinnLmE9V5CDI0HEm6WGbIPMNt3V5SGlClHF8-BetotKHOImrvQDSXmFdiOw8D/pub
+**Published:** 2026-10-05 06:16:32
+**Score:** 5
 
 
 
 ---
 
-## Interview with Chicken Scheme Maintainer Sjamaan/Peter Bex
+## Testing 12 different Zigbee temperature/humidity sensors
 
 **Source:** hackernews
-**URL:** https://alexalejandre.com/interviews/peter-bex/
-**Published:** 2026-10-02 17:17:04
-**Score:** 27
+**URL:** https://smarthomescene.com/reviews/best-selling-zigbee-temperature-sensors-tested/
+**Published:** 2026-10-03 23:30:46
+**Score:** 7
 
 
 
 ---
 
-## Demystifying Tufte's data-ink ratio
+## Texas city demands $2M for public records on Flock usage
 
 **Source:** hackernews
-**URL:** https://tuftesrazor.scienceux.org/
-**Published:** 2026-10-02 18:55:17
-**Score:** 27
+**URL:** https://arstechnica.com/tech-policy/2026/10/texas-city-demands-2m-for-public-records-on-flock-usage/
+**Published:** 2026-10-05 17:05:57
+**Score:** 38
 
 
 
 ---
 
-## Homa: The end of TCP for AI clusters [video]
+## Making a GTK application in Haskell, part 1
 
 **Source:** hackernews
-**URL:** https://www.youtube.com/watch?v=eZ8WWZzoaR0
-**Published:** 2026-10-04 14:42:25
-**Score:** 67
-
-Paper: 
-<a href="https:&#x2F;&#x2F;www.usenix.org&#x2F;system&#x2F;files&#x2F;atc21-ousterhout.pdf" rel="nofollow">https:&#x2F;&#x2F;www.usenix.org&#x2F;system&#x2F;files&#x2F;atc21-ousterhout.pdf</a>
-
----
-
-## Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash
-
-**Source:** hackernews
-**URL:** https://niklasroy.com/gtc/
-**Published:** 2026-10-02 01:33:06
-**Score:** 181
-
-This is a functional 30-minute pendulum clock entirely from discarded materials—cardboard, zip ties, tape, a yardstick, and a paperclip escapement, built in the German Eldorado of precision watchmakin
-
----
-
-## All I wanted was a custom domain email
-
-**Source:** hackernews
-**URL:** https://jacobg.co/emails-at-jacobg-co/
-**Published:** 2026-10-04 12:47:21
-**Score:** 49
+**URL:** https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/
+**Published:** 2026-10-05 09:23:47
+**Score:** 125
 
 
 
 ---
 
-## How to scale intent, quality, and artistry with AI [video]
+## Linux containers in 500 lines of code (2016)
 
 **Source:** hackernews
-**URL:** https://www.youtube.com/watch?v=GLvFTMtw4Jk
-**Published:** 2026-10-04 03:41:58
-**Score:** 72
+**URL:** https://blog.lizzie.io/linux-containers-in-500-loc.html
+**Published:** 2026-10-05 09:09:15
+**Score:** 89
 
 
 
 ---
 
-## Bill Draper has died
+## The lamps in my house
 
 **Source:** hackernews
-**URL:** https://www.nytimes.com/2026/09/30/technology/william-draper-dead.html
-**Published:** 2026-10-04 07:21:35
-**Score:** 108
-
-<a href="https:&#x2F;&#x2F;archive.ph&#x2F;YRgDY" rel="nofollow">https:&#x2F;&#x2F;archive.ph&#x2F;YRgDY</a>
-
----
-
-## What is going on with ceiling fans
-
-**Source:** hackernews
-**URL:** https://mcmansionhell.com/post/829127919552151552/what-is-going-on-with-ceiling-fans
-**Published:** 2026-09-30 22:52:10
-**Score:** 268
+**URL:** https://arslan.io/2026/10/05/the-lamps-in-my-house/
+**Published:** 2026-10-05 09:12:14
+**Score:** 112
 
 
 
 ---
 
-## Show HN: AI search for every photo and every frame of video on macOS
+## The Future of Mathematics
 
 **Source:** hackernews
-**URL:** https://github.com/allenv0/SCM
-**Published:** 2026-10-04 04:24:52
-**Score:** 149
+**URL:** https://terrytao.wordpress.com/2026/10/05/the-future-of-mathematics/
+**Published:** 2026-10-05 14:22:40
+**Score:** 74
 
 
 
 ---
 
-## Results from the ASIC puzzle
+## Show HN: Nightwatch – a Mac menu-bar app that tells you when tonight is clear
 
 **Source:** hackernews
-**URL:** https://blog.janestreet.com/asic-puzzle-results/
-**Published:** 2026-10-02 09:42:44
-**Score:** 82
+**URL:** https://github.com/rsutcliffe/nightwatch
+**Published:** 2026-10-04 04:31:01
+**Score:** 68
+
+Here in the north of England clear nights are at a premium, and it&#x27;s never guaranteed that you&#x27;ll be able to see anything but cloud. That&#x27;s why I developed Nightwatch, so that I could b
+
+---
+
+## Incident with Actions
+
+**Source:** hackernews
+**URL:** https://www.githubstatus.com/incidents/3q1yb5m7ltvb
+**Published:** 2026-10-05 15:09:12
+**Score:** 92
 
 
 
 ---
 
-## Kagi Ends Orion Browser Development for Linux, Will Open-Source It
+## Better Space-Time Trade-Offs for LSM-Tree Based Key-Value Stores [pdf]
 
 **Source:** hackernews
-**URL:** https://linuxiac.com/kagi-ends-orion-browser-development-for-linux-will-open-source-it/
-**Published:** 2026-10-04 23:18:39
-**Score:** 11
+**URL:** https://nivdayan.github.io/dostoevsky.pdf
+**Published:** 2026-10-05 17:25:47
+**Score:** 5
+
+
+
+---
+
+## Apple and a hacker's future
+
+**Source:** hackernews
+**URL:** https://stratechery.com/2026/apple-and-a-hackers-future/
+**Published:** 2026-10-05 05:05:02
+**Score:** 191
+
+
+
+---
+
+## Qualcomm licenses patents on Huawei’s LogicFolding chip tech
+
+**Source:** hackernews
+**URL:** https://www.bloomberg.com/news/articles/2026-10-05/qualcomm-licenses-patents-on-huawei-s-logicfolding-chip-tech
+**Published:** 2026-10-05 02:46:10
+**Score:** 172
+
+<a href="https:&#x2F;&#x2F;archive.ph&#x2F;Axpbl" rel="nofollow">https:&#x2F;&#x2F;archive.ph&#x2F;Axpbl</a><p><a href="https:&#x2F;&#x2F;www.huawei.com&#x2F;en&#x2F;news&#x2F;2026&#x2F;10&#x2F;qualco
+
+---
+
+## The first fully implanted cochlear implant reaches patients
+
+**Source:** hackernews
+**URL:** https://spectrum.ieee.org/fully-implantable-cochlear-implant
+**Published:** 2026-10-01 07:31:40
+**Score:** 57
+
+
+
+---
+
+## The era of software quality, or the era of ostriches?
+
+**Source:** hackernews
+**URL:** https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches/
+**Published:** 2026-10-03 09:07:29
+**Score:** 24
 
 
 
