@@ -199,9 +199,13 @@ pytest tests/ -v
 pytest tests/ --cov=src --cov-report=term-missing
 ```
 
-The suite currently has 24 passing tests and 3 skipped ones (manual scripts that
-you run with `python -m`). Tests that use an LLM call the real model first and
-use mock responses if it fails, so the suite never depends on the provider.
+The suite currently has 41 passing tests and 3 skipped ones (manual scripts that
+you run with `python -m`), with 64 % line coverage (`pytest --cov=src`). The code
+that is not covered is mostly the entry points (`main`, `pipeline`,
+`complete_pipeline`), the MCP servers (they run in a subprocess, so coverage does
+not see them) and the manual scripts. Tests that use an LLM call the real model
+first and use mock responses if it fails, so the suite never depends on the
+provider.
 
 ## Development
 

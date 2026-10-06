@@ -148,8 +148,8 @@ runs fetchers sequentially, so the fetch step is not concurrent.
 
 ## Testing
 
-`pytest tests/`: 24 passing, 3 skipped (manual scripts run with `python -m`).
-See the [README](../README.md#running-tests).
+`pytest tests/`: 41 passing, 3 skipped (manual scripts run with `python -m`), 64 %
+line coverage. See the [README](../README.md#running-tests).
 
 ## Future enhancements
 
