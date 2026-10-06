@@ -126,8 +126,10 @@ python -X utf8 -m src.skills.search_skill   # SearchSkill over the database serv
 The database is filled by the pipeline and can be queried through the MCP
 server; the three agents exchange data through markdown files in `data/`.
 
-See [`docs/architecture/overview.md`](docs/architecture/overview.md) and
-[`docs/design-decisions.md`](docs/design-decisions.md) for the design reasoning.
+See [`docs/architecture.md`](docs/architecture.md) for the components in detail,
+[`docs/design-decisions.md`](docs/design-decisions.md) for the design reasoning and
+[`docs/architecture/overview.md`](docs/architecture/overview.md) for the curriculum
+orientation.
 
 ## Project structure
 
